@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Support Ron Paul on Twitter";
+}
+<div class="span10">
+    <article id="intro">
+        <header>
+            <h2>
+                Show Your Support</h2>
+            Change your profile picture to help spread the word about <a href="http://www.ronpaul2012.com/">
+                Ron Paul.</a>
+		</header>
+        <h3 class="clear-float">
+            Join @ViewBag.TotalUsers others and change your profile picture</h3>
+    </article>
+    <div class="preview-options">
+        <ul class="media-grid">
+            <li><a href="/Twitter/InitiatePreview?previewType=BasicBlack" title="Preview your twitter picture">
+                <img class="thumbnail" src="/images/sample-basic.png" width="73px" height="73px" />
+            </a>
+                <div>
+                    <h4>
+                        Ron Paul Fan Badge <small>@ViewBag.BasicBlackUserCount people added this badge</small></h4>
+                    @Html.ActionLink("Preview Your Twitter Picture", "InitiatePreview", "Twitter", new { previewType = "BasicBlack" },
+                       new
+                       {
+                           id = "preview-twitter",
+                           Class = "btn large primary"
+                       })
+                </div>
+            </li>
+        </ul>
+        <ul class="media-grid">
+            <li><a href="/Twitter/InitiatePreview?previewType=BasicRed" title="Preview your twitter picture">
+                <img class="thumbnail" src="/images/sample-basic-red.png" width="73px" height="73px" />
+            </a>
+                <div>
+                    <h4>
+                        Ron Paul Red State Fan Badge <small>@ViewBag.BasicRedUserCount people added this badge</small></h4>
+                    @Html.ActionLink("Preview Your Twitter Picture", "InitiatePreview", "Twitter", new { previewType = "BasicRed" },
+                       new
+                       {
+                           id = "preview-twitter",
+                           Class = "btn large primary"
+                       })
+                </div>
+            </li>
+        </ul>
+        <ul class="media-grid">
+            <li><a href="/Twitter/InitiatePreview?previewType=ItsTime" title="Preview your twitter picture">
+                <img class="thumbnail" src="/images/restore-full.jpg" width="73px" height="73px" />
+            </a>
+                <div>
+                    <h4>
+                        Ron Paul Restore America Badge <small>@ViewBag.ItsTimeUserCount people added this badge</small></h4>
+                    @Html.ActionLink("Preview Your Twitter Picture", "InitiatePreview", "Twitter", new { previewType = "ItsTime" },
+                       new
+                       {
+                           id = "preview-twitter",
+                           Class = "btn large primary"
+                       })
+                </div>
+            </li>
+        </ul>
+        <ul class="media-grid">
+            <li><a href="#">
+                <img class="thumbnail" width="73px" height="73px" src="http://placehold.it/73x73"
+                    alt="">
+            </a>
+                <div>
+                    <h4>
+                        More coming soon</h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+@Html.Partial("RightColumn")

@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Thank You for Supporting Ron Paul";
+}
+<div class="span10">
+    <article id="intro">
+        <header>
+            <h2>
+                Thanks For Your Support</h2>
+		</header>
+        <h3 class="clear-float">
+            You have joined @ViewBag.TotalUsers others showing their support</h3>
+    </article>
+
+    <div class="share-with-others">
+        Let's make a difference. Share this website with your friends.
+
+
+        <!-- AddThis Button BEGIN -->
+        <div class="addthis_toolbox addthis_default_style ">
+            <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+            <a class="addthis_button_tweet"></a>
+            <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+            <a class="addthis_counter addthis_pill_style"></a>
+        </div>
+        <!-- AddThis Button END -->
+
+    </div>
+
+    <ul class="media-grid">
+        <li><a href="/Twitter/InitiatePreview?previewType=BasicBlack">
+            <img class="thumbnail" src="/images/sample-basic.png" width="73px" height="73px" />
+        </a>
+            <div>
+                <h4>
+                    Ron Paul Fan Badge <small>@ViewBag.BasicBlackUserCount people added this badge</small></h4>
+                Adds a banner to the bottom of your profile picture.
+            </div>
+        </li>
+    </ul>
+    <ul class="media-grid">
+        <li><a href="/Twitter/InitiatePreview?previewType=BasicRed">
+            <img class="thumbnail" src="/images/sample-basic-red.png" width="73px" height="73px" />
+        </a>
+            <div>
+                <h4>
+                    Ron Paul Red State Fan Badge <small>@ViewBag.BasicRedUserCount people added this badge</small></h4>
+                Adds a red banner to the bottom of your profile picture.
+            </div>
+        </li>
+    </ul>
+    <ul class="media-grid">
+        <li><a href="/Twitter/InitiatePreview?previewType=ItsTime">
+            <img class="thumbnail" src="/images/restore-full.jpg" width="73px" height="73px" />
+        </a>
+            <div>
+                <h4>
+                    Ron Paul Restore America Badge <small>@ViewBag.ItsTimeUserCount people added this badge</small></h4>
+                Show your full support with this as your profile picture.
+            </div>
+        </li>
+    </ul>
+    <ul class="media-grid">
+        <li><a href="#">
+            <img class="thumbnail" width="73px" height="73px" src="http://placehold.it/73x73"
+                alt="">
+        </a>
+            <div>
+                <h4>
+                    More coming soon</h4>
+            </div>
+        </li>
+    </ul>
+</div>
+@Html.Partial("RightColumn")

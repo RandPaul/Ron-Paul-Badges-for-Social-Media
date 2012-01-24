@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Ron Paul Support Badge - Preview";
+}
+<div class="span14">
+    <div>
+        <h2>
+            Hello from Twitter @@@ViewBag.UserName</h2>
+    </div>
+    <article class="preview-pictures">
+        <ul class="media-grid preview">
+            <li>
+                <img class="thumbnail" src="@ViewBag.OriginalProfileImageLocation" width="73px" height="73px" title="Your original twitter profile picture" alt="Your original twitter profile picture" />
+                <div>
+                    <h4>
+                        Your original Twitter profile picture <small>you can always change it back</small></h4>
+                </div>
+            </li>
+        </ul>
+        <ul class="media-grid preview">
+            <li>
+                <img class="thumbnail" src="@Url.Action("PreviewImage", new { previewType = ViewBag.ImagePreviewType })" width="73px" height="73px" title="A preview of your new twitter profile picture" alt="A preview of your new twitter profile picture" />
+                <div>
+                    <h4>
+                        Your new Twitter profile picture preview <small>click below to accept</small></h4>
+                    Show your support for Ron Paul with your profile picture.
+                </div>
+            </li>
+        </ul>
+    </article>
+    <div class="well">
+        @using (@Html.BeginForm("UpdatePicture", "twitter", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <input class="btn large primary" type="submit" value="Yes, Update My Twitter Picture" />
+            <a href="/" class="btn large">Cancel</a>
+        }
+    </div>
+</div>
